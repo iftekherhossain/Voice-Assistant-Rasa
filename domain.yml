@@ -1,0 +1,60 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - ask_for_owner
+  - sad
+  - message
+  - bot_challenge
+
+entities:
+  - name
+  - message
+
+slots:
+  name:
+    type: text
+  message:
+    type: text
+
+actions:
+- utter_greet
+- utter_no
+- utter_ask_identity
+- utter_ask_if_message
+- utter_beep_message
+- utter_goodbye
+- utter_iamabot
+- utter_message_recorded
+- action_message
+
+
+templates:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_no:
+  - text: "No.Nabil is not at home right now. you can give message to him."
+
+  utter_ask_identity:
+  - text: "Can I know who you are?"
+  - text: "Can you please give me your identity?"
+
+  utter_ask_if_message:
+  - text: "Do you have any message to Nabil?"
+
+  utter_beep_message:
+  - text: "Ok. tell your message after the beep.Beeeeep!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_message_recorded:
+  - text: "Your message is recorded. It will be forwarded to mr nabil"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
